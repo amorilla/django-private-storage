@@ -12,7 +12,7 @@ on:
   release:
     types: [published]
     branches:
-      - master
+      - test-pypi.org
       
 permissions:
   contents: read
@@ -42,7 +42,7 @@ jobs:
         python setup.py sdist --format=gztar bdist_wheel
         
     - name: Publish package
-      uses: pypa/gh-action-pypi-publish@master
+      uses: pypa/gh-action-pypi-publish@test-pypi.org
       with:
         user: __token__
         password: ${{ secrets.TEST_PYPI_API_TOKEN }}
