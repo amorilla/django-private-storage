@@ -34,7 +34,7 @@ def find_version(*parts):
 
 
 setup(
-    name='django-private-storage',
+    name='djau-private-storage',
     version=find_version('private_storage', '__init__.py'),
     license='Apache 2.0',
 
